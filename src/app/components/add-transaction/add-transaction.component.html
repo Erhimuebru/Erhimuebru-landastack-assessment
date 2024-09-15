@@ -1,0 +1,38 @@
+<div class="transaction-form">
+    <p>Add A New Transaction</p>
+    <div class="form-row">
+      <div class="col-sm-2">
+        <input class="form-control mb-2" [(ngModel)]="newTransaction.name" placeholder="Transaction Name">
+      </div>
+      <div class="col-sm-2">
+        <input class="form-control mb-2" [(ngModel)]="newTransaction.amount" type="number" placeholder="Amount">
+      </div>
+      <div class="col-sm-2">
+        <input class="form-control mb-2" list="categoryList" [(ngModel)]="newTransaction.category" placeholder="Select or Type Category">
+        <datalist id="categoryList">
+          <option value="Groceries"></option>
+          <option value="Utilities"></option>
+          <option value="Rent"></option>
+          <option value="Entertainment"></option>
+          <option value="Healthcare"></option>
+        </datalist>
+      </div>
+      
+      <div class="col-sm-2">
+        <select class="form-control custom-select mb-2" [(ngModel)]="newTransaction.paymentMethod">
+          <option value="" disabled selected>Select Payment Method</option>
+          <option value="Card">Credit Card</option>
+          <option value="POS">POS</option>
+          <option value="Bank Transfer">Bank Transfer</option>
+          <option value="Cash">Cash</option>
+        </select>
+      </div>
+      
+      
+     
+    </div>
+    <div class="transaction-btn">
+        <button class="btn btn-primary add-transaction-btn" (click)="addTransaction()">Add Transaction</button>
+      </div>
+  </div>
+  
