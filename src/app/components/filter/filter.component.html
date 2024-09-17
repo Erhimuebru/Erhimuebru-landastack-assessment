@@ -1,6 +1,12 @@
 <div class="search-bar-container">
   <div class="search-bar">
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Search for Transaction name...!" (ngModelChange)="onSearchChange()" class="form-control">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Search for Transaction name...!"
+      (ngModelChange)="onSearchChange()"
+      class="form-control"
+    />
     <div class="search-icon">
       <span class="material-icons">search</span>
     </div>

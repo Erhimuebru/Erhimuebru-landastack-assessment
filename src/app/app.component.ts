@@ -13,11 +13,7 @@
 //   title = 'erhimuebru-lendastack-assessment';
 // }
 
-
-
-// import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { ButtonModule } from 'primeng/button';
 import { ItemsComponent } from './components/items/items.component';
 import { RouterOutlet } from '@angular/router';
@@ -32,10 +28,10 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     ButtonModule,
     ItemsComponent,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'erhimuebru-lendastack-assessment';

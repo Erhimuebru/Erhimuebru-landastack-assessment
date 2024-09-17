@@ -6,15 +6,14 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './add-transaction.component.html',
-  styleUrl: './add-transaction.component.scss'
+  styleUrl: './add-transaction.component.scss',
 })
 export class AddTransactionComponent {
-
   newTransaction = {
     name: '',
     amount: null,
     category: '',
-    paymentMethod: ''
+    paymentMethod: '',
   };
 
   @Output() transactionAdded = new EventEmitter<any>();
@@ -22,7 +21,12 @@ export class AddTransactionComponent {
   addTransaction() {
     if (this.newTransaction.name && this.newTransaction.amount) {
       this.transactionAdded.emit(this.newTransaction);
-      this.newTransaction = { name: '', amount: null, category: '', paymentMethod: '' };
+      this.newTransaction = {
+        name: '',
+        amount: null,
+        category: '',
+        paymentMethod: '',
+      };
     }
   }
 }
